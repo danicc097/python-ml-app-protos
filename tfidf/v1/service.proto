@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package tfidf;
 
-service MovieSynopsis {
+service MovieGenre {
   rpc Predict (PredictRequest) returns (PredictReply) {}
   rpc Train (TrainRequest) returns (TrainReply) {}
 }
