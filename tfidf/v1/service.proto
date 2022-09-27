@@ -2,14 +2,22 @@ syntax = "proto3";
 
 package tfidf;
 
-service GreeterService {
-  rpc SayHello (HelloRequest) returns (HelloReply) {}
+service MovieSynopsis {
+  rpc Predict (PredictRequest) returns (PredictReply) {}
+  rpc Train (TrainRequest) returns (TrainReply) {}
 }
 
-message HelloRequest {
+message PredictRequest {
   string name = 1;
 }
 
-message HelloReply {
+message PredictReply {
+  string message = 1;
+}
+
+message TrainRequest {
+}
+
+message TrainReply {
   string message = 1;
 }
