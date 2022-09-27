@@ -8,11 +8,15 @@ service MovieGenre {
 }
 
 message PredictRequest {
-  string name = 1;
+  string synopsis = 1;
 }
 
 message PredictReply {
-  string message = 1;
+  repeated Prediction predictions = 1;
+}
+
+message Prediction {
+  string genre = 1;
 }
 
 message TrainRequest {
